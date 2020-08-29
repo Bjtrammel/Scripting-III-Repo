@@ -1,0 +1,1914 @@
+file -f -new;
+// Warning: file: D:/Program Files/Autodesk/Maya2018/scripts/startup/rememberViewportSettings.mel line 29: Active stereo does not work with Aero enabled. Active stereo has been disabled. // 
+// untitled // 
+commandPort -securityWarning -name commandportDefault;
+onSetCurrentLayout "Maya Classic";
+// Warning: file: C:\Users\Tramm\Documents\maya\2018\prefs\filePathEditorRegistryPrefs.mel line 4: filePathEditor: Attribute 'aiImage.filename' is invalid or is not designated 'usedAsFilename'. // 
+// Warning: file: C:\Users\Tramm\Documents\maya\2018\prefs\filePathEditorRegistryPrefs.mel line 5: filePathEditor: Attribute 'aiStandIn.dso' is invalid or is not designated 'usedAsFilename'. // 
+// Warning: file: C:\Users\Tramm\Documents\maya\2018\prefs\filePathEditorRegistryPrefs.mel line 6: filePathEditor: Attribute 'aiVolume.filename' is invalid or is not designated 'usedAsFilename'. // 
+// AbcExport v1.0 using Alembic 1.5.8 (built Jul 13 2016 18:28:45)
+# pymel.core : Updating pymel with pre-loaded plugins: mayaHIK, invertShape, GamePipeline, curveWarp, CloudImportExport, tiffFloatReader, MASH, poseInterpolator, bifrostvisplugin, ATFPlugin, hairPhysicalShader, ikSpringSolver, ik2Bsolver, xgenToolkit, AbcExport, retargeterNodes, gameFbxExporter, VectorRender, OpenEXRLoader, lookdevKit, Unfold3D, Type, mayaCharacterization, modelingToolkit, deformerEvaluator, renderSetup, GPUBuiltInDeformer, fbxmaya
+evalDeferred "shaderBallRendererMenuUpdate";
+// Warning: line 1: filePathEditor: Attribute 'aiStandIn.dso' and label 'Standin' have been saved already. // 
+// Warning: line 1: filePathEditor: Attribute 'aiVolume.filename' and label 'VDB' have been saved already. // 
+// Warning: line 1: filePathEditor: Attribute 'aiImage.filename' and label 'Image' have been saved already. // 
+import arnold
+// Successfully imported python module 'arnold'
+import mtoa
+// Successfully imported python module 'mtoa'
+import mtoa.cmds.registerArnoldRenderer;mtoa.cmds.registerArnoldRenderer.registerArnoldRenderer()
+Maya 2018 importing module pymel 1.0.10 (D:\Program Files\Autodesk\Maya2018\Python\lib\site-packages\pymel\__init__.pyc)
+// Successfully registered renderer 'arnold'
+// Warning: file: D:/Program Files/Autodesk/Maya2018/scripts/startup/autoLoadPlugin.mel line 35: Loading plug-in "mtoa" has resulted in changes to the scene that may need to be saved. // 
+// AbcImport v1.0 using Alembic 1.5.8 (built Jul 13 2016 18:28:45)
+updateRendererUI;
+updateRendererUI;
+//Body
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 2.5 2.5 2.5;
+select -r pSphere1.vtx[381] ;
+softSelect -ssd 6.170822 -sud 0.5 ;
+scale -r -p 0cm 2.5cm 0cm 0.516667 0.516667 0.516667 ;
+select -r pSphere1.vtx[144] ;
+softSelect -ssd 5.976315 -sud 0.5 ;
+move -r 0 0 -0.451164 ;
+select -r pSphere1.vtx[380] ;
+softSelect -ssd 2.380477 -sud 0.5 ;
+move -r 0 0.423403 0 ;
+select -r pSphere1 ;
+move -r 0 1.52562 0 ;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.645914 0.645914 0.645914 ;
+move -r 0.913625 6.156428 0 ;
+scale -r 1 1 0.574031 ;
+select -r pSphere2 ;
+doDelete;
+//Ears
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.646 0.646 0.371 ;
+move -r 0.913625 6.156428 0 ;
+//scale -r 1 1 0.574031 ;
+select -r pSphere2 ;
+doDelete;
+//Mouth
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.696711 0.696711 0.696711 ;
+scale -r 1.278197 1 1 ;
+select -r pSphere2 ;
+doDelete;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.696711 0.696711 0.696711 ;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.696711 0.696711 0.696711 ;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.696711 0.696711 0.696711 ;
+scale -r 1.278197 1 1 ;
+select -r pSphere2 ;
+doDelete;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.891 0.697 0.697 ;
+select -r pSphere2 ;
+select -r pSphere1 pSphere2 ;
+doDelete;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.191921 0.191921 0.191921 ;
+scale -r 1 1 0.269795 ;
+scale -r 1 1.458023 1 ;
+select -r pSphere1 ;
+doDelete;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.360746 5.430847 0 ;
+move -r 0 0 -1.496154 ;
+move -r 0 0.17223 0 ;
+select -cl  ;
+select -r pSphere1 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+move -r 0 0 0.0907301 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 0 26.08691 0 ;
+rotate -r -os -fo 0 0 -7.806559 ;
+select -r pSphere1 ;
+// Undo: select -r pSphere1  // 
+// Undo: rotate -r -os -fo 21.594293 -12.479332 0 ;
+move -r 0 0 0.0907301 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 0 26.08691 0 ;
+rotate -r -os -fo 0 0 -7.806559 ; // 
+select -r pSphere1 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+move -r 0 0 0.0907301 ;
+// Error: line 1: There are no more commands to redo. // 
+select -cl  ;
+select -r pSphere1 ;
+select -cl  ;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+select -r pSphere1 ;
+select -r pSphere2 ;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 0 26.08691 0 ;
+rotate -r -os -fo 0 0 -7.806559 ;
+select -r pSphere2 ;
+select -cl  ;
+select -r pSphere1 pSphere2 ;
+doDelete;
+//Body
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 2.5 2.5 2.5;
+select -r pSphere1.vtx[381] ;
+softSelect -ssd 6.170822 -sud 0.5 ;
+scale -r -p 0cm 2.5cm 0cm 0.516667 0.516667 0.516667 ;
+select -r pSphere1.vtx[144] ;
+softSelect -ssd 5.976315 -sud 0.5 ;
+move -r 0 0 -0.451164 ;
+select -r pSphere1.vtx[380] ;
+softSelect -ssd 2.380477 -sud 0.5 ;
+move -r 0 0.423403 0 ;
+select -r pSphere1 ;
+move -r 0 1.52562 0 ;
+//head
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 1.603335 1.603335 1.603335 ;
+move -r 0 5 0 ;
+//Ears
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.646 0.646 0.371 ;
+move -r 0.913625 6.156428 0 ;
+select -r pSphere3.vtx[184] ;
+softSelect -ssd 1.059736 -sud 0.5 ;
+move -r 0 0 0.714828 ;
+duplicate -rr;
+select -r pSphere4 ;
+move -r -1.885075 0 0 ;
+//Mouth
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.891 0.697 0.697 ;
+
+//eyes
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 19.821 14.598 2.016;
+select -r pSphere7 ;
+select -cl  ;
+select -r pSphere7 ;
+rotate -r -os -fo -20.673702 0 0 ;
+rotate -r -os -fo 0 10.17182 0 ;
+select -cl  ;
+select -r pSphere7 ;
+select -cl  ;
+select -r pSphere5 pSphere4 pSphere7 pSphere6 pSphere2 pSphere1 pSphere3 ;
+doDelete;
+//Body
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 2.5 2.5 2.5;
+select -r pSphere1.vtx[381] ;
+softSelect -ssd 6.170822 -sud 0.5 ;
+scale -r -p 0cm 2.5cm 0cm 0.516667 0.516667 0.516667 ;
+select -r pSphere1.vtx[144] ;
+softSelect -ssd 5.976315 -sud 0.5 ;
+move -r 0 0 -0.451164 ;
+select -r pSphere1.vtx[380] ;
+softSelect -ssd 2.380477 -sud 0.5 ;
+move -r 0 0.423403 0 ;
+select -r pSphere1 ;
+move -r 0 1.52562 0 ;
+//head
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 1.603335 1.603335 1.603335 ;
+move -r 0 5 0 ;
+//Ears
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.646 0.646 0.371 ;
+move -r 0.913625 6.156428 0 ;
+select -r pSphere3.vtx[184] ;
+softSelect -ssd 1.059736 -sud 0.5 ;
+move -r 0 0 0.714828 ;
+duplicate -rr;
+select -r pSphere4 ;
+move -r -1.885075 0 0 ;
+//Mouth
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.891 0.697 0.697 ;
+
+//eyes
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 20.045 10.003 10.617 ;
+select -r pSphere1 ;
+select -r pSphere1 pSphere2 pSphere3 pSphere4 pSphere5 pSphere6 pSphere7 ;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+// Result: pSphere2 // 
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 20.045 10.003 10.617 ;
+rotate -r -os -fo -29.163775 0 0 ;
+rotate -r -os -fo 0 0 -17.885129 ;
+select -r pSphere2 pSphere1 ;
+doDelete;
+//head
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 1.603335 1.603335 1.603335 ;
+move -r 0 5 0 ;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 20.045 10.003 10.617 ;
+rotate -r -os -fo -14.537509 0 0 ;
+rotate -r -os -fo 0 0 -16.005152 ;
+rotate -r -os -fo 0 12.951924 0 ;
+select -r pSphere1 ;
+select -r pSphere1 pSphere2 pSphere3 ;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+// Result: pSphere1 polySphere1 // 
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+// Result: pSphere2 polySphere2 // 
+scale -r 0.192 0.28 0.052 ;
+select -r pSphere1 ;
+select -r pSphere2 ;
+rotate -r -os -fo 20.045 10.003 10.617 ;
+rotate -r -os -fo 0 0 -7.993798 ;
+rotate -r -os -fo 0 -13.832308 0 ;
+rotate -r -os -fo 0 4.225635 0 ;
+doDelete;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+select -r pSphere1 ;
+rotate -r -os -fo 18.101 3.525 +0.124;
+// Error: rotate -r -os -fo 18.101 3.525 +0.124; // 
+// Error: Line 1.32: Syntax error // 
+rotate -r -os -fo 18.101 3.525 -0.124 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+select -r pSphere1 ;
+// Undo: select -r pSphere1  // 
+// Undo: rotate -r -os -fo 21.594293 -12.479332 0 ; // 
+// Undo: rotate -r -os -fo 18.101 3.525 -0.124 ; // 
+// Undo: select -r pSphere1  // 
+rotate -r -os -fo 0 36.015322 0 ;
+rotate -r -os -fo 0 0 -4.844698 ;
+// Undo: rotate -r -os -fo 0 0 -4.844698  // 
+// Undo: rotate -r -os -fo 0 36.015322 0  // 
+select -r pSphere1 ;
+doDelete;
+//Body
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 2.5 2.5 2.5;
+select -r pSphere1.vtx[381] ;
+softSelect -ssd 6.170822 -sud 0.5 ;
+scale -r -p 0cm 2.5cm 0cm 0.516667 0.516667 0.516667 ;
+select -r pSphere1.vtx[144] ;
+softSelect -ssd 5.976315 -sud 0.5 ;
+move -r 0 0 -0.451164 ;
+select -r pSphere1.vtx[380] ;
+softSelect -ssd 2.380477 -sud 0.5 ;
+move -r 0 0.423403 0 ;
+select -r pSphere1 ;
+move -r 0 1.52562 0 ;
+//head
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 1.603335 1.603335 1.603335 ;
+move -r 0 5 0 ;
+//Ears
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.646 0.646 0.371 ;
+move -r 0.913625 6.156428 0 ;
+select -r pSphere3.vtx[184] ;
+softSelect -ssd 1.059736 -sud 0.5 ;
+move -r 0 0 0.714828 ;
+duplicate -rr;
+select -r pSphere4 ;
+move -r -1.885075 0 0 ;
+//Mouth
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.891 0.697 0.697 ;
+
+//eyes
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 18.101 3.525 -0.124 ;
+doDelete;
+select -r pSphere6 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 0 21.082618 0 ;
+rotate -r -os -fo 0 0 -7.282339 ;
+doDelete;
+select -r pSphere6 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 0 21.082 -7.282 ;
+select -cl  ;
+//nose
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.150693 0.150693 0.150693 ;
+scale -r 1.318042 1 1 ;
+select -r pSphere5 ;
+// Undo: select -r pSphere5  // 
+// Undo: //nose
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.150693 0.150693 0.150693 ;
+scale -r 1.318042 1 1 ; // 
+select -r pSphere5 ;
+// Undo: select -r pSphere5  // 
+// Undo: select -cl   // 
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.150693 0.150693 0.150693 ;
+scale -r 1.318042 1 1 ;
+move -r 0 5.025443 -1.933947 ;
+select -r pSphere8 ;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.199 0.151 0.151 ;
+//scale -r 1.318042 1 1 ;
+move -r 0 5.025443 -1.933947 ;
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643494 0.643494 0.643494 ;
+scale -r 1 1.86261 1 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.798408 2.582666 0 ;
+select -r pCylinder1 ;
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+//scale -r 1 1.86261 1 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.798408 2.582666 0 ;
+select -r pCylinder1 ;
+//Arms
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.798408 2.582666 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1 ;
+move -r -0.127662 0.470685 0 ;
+select -r pCylinder1 ;
+//Arms
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.053 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1 ;
+doDelete;
+//Arms
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.053 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+//select -r pCylinder1 ;
+//move -r -0.127662 0.470685 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ;
+select -cl  ;
+select -r pCylinder1 ;
+move -r 0 0.287199 0 ;
+select -r pCylinder1 ;
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+//select -r pCylinder1 ;
+//move -r -0.127662 0.470685 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ;
+// Undo: polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+//select -r pCylinder1 ;
+//move -r -0.127662 0.470685 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ; // 
+// Redo: polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+//select -r pCylinder1 ;
+//move -r -0.127662 0.470685 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ; // 
+select -cl  ;
+select -r pCylinder1 ;
+move -r 0 0.217473 0 ;
+select -cl  ;
+select -r pCylinder1 ;
+doDelete;
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1 ;
+move -r -0.127662 0.470685 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ;
+move -r 0 -0.319045 0 ;
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1 ;
+move -r -0.127662 0.470685 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+// Result: polySoftEdge1 // 
+// Undo: polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1 ;
+move -r -0.127662 0.470685 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99]; // 
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1 ;
+move -r -0.127662 0.470685 0 ;
+select -r pCylinder1 ;
+//Arms
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -cl  ;
+select -r pCylinder1 ;
+doDelete;
+//Arms
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.6 1.2 0.6 ;
+rotate -r -os -fo 90 -30 0 ;
+move -r 1.6 0.7 -2.27 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+// Warning: line 7: 'polyMirror1.firstNewFace' is already connected to 'polySeparate1.startFace'. // 
+// Warning: line 8: 'polyMirror1.lastNewFace' is already connected to 'polySeparate1.endFace'. // 
+select -r pCylinder5 ;
+select -r pCylinder5 pCylinder4 pCylinder3 pCylinder1 pSphere8 pSphere7 pSphere6 pSphere5 pSphere4 pSphere3 pSphere2 pSphere1 ;
+//Body
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 2.5 2.5 2.5;
+select -r pSphere1.vtx[381] ;
+softSelect -ssd 6.170822 -sud 0.5 ;
+scale -r -p 0cm 2.5cm 0cm 0.516667 0.516667 0.516667 ;
+select -r pSphere1.vtx[144] ;
+softSelect -ssd 5.976315 -sud 0.5 ;
+move -r 0 0 -0.451164 ;
+select -r pSphere1.vtx[380] ;
+softSelect -ssd 2.380477 -sud 0.5 ;
+move -r 0 0.423403 0 ;
+select -r pSphere1 ;
+move -r 0 1.52562 0 ;
+//head
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 1.603335 1.603335 1.603335 ;
+move -r 0 5 0 ;
+//Ears
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.646 0.646 0.371 ;
+move -r 0.913625 6.156428 0 ;
+select -r pSphere3.vtx[184] ;
+softSelect -ssd 1.059736 -sud 0.5 ;
+move -r 0 0 0.714828 ;
+duplicate -rr;
+select -r pSphere4 ;
+move -r -1.885075 0 0 ;
+
+//Mouth
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.891 0.697 0.697 ;
+
+//eyes
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 0 21.082 -7.282 ;
+
+//nose
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.199 0.151 0.151 ;
+move -r 0 5.025443 -1.933947 ;
+
+//Arms
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+
+//Legs
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.6 1.2 0.6 ;
+rotate -r -os -fo 90 -30 0 ;
+move -r 1.6 0.7 -2.27 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+
+//Feet
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+rotate -r -os -fo 90 0 0 ;
+select -r pSphere9.vtx[380] ;
+scale -r -p 0cm 0cm -1cm 1 1e-05 1 ;
+select -r pSphere9 ;
+rotate -r -os -fo 0 0 30.570014 ;
+scale -r 1 1 1.566913 ;
+move -r 1.959965 0 -3.7185 ;
+move -r 0 0.848516 0 ;
+move -r 0.50456 0 0.433538 ;
+select -r pSphere9
+move -r -0.165009 0 0.306508 ;
+select -r pSphere9 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pSphere9;
+polySeparate -uss 1 -inp 1 pSphere9;
+connectAttr -f polyMirror3.firstNewFace polySeparate3.startFace;
+connectAttr -f polyMirror3.lastNewFace polySeparate3.endFace;
+select -r pSphere11 ;
+move -r 0.0130027 0 0.32822 ;
+select -r pSphere10 ;
+
+//Tail
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.436808 0.436808 0.436808 ;
+move -r 0 -0.0172248 1.577462 ;
+// Warning: line 86: 'polyMirror1.firstNewFace' is already connected to 'polySeparate1.startFace'. // 
+// Warning: line 87: 'polyMirror1.lastNewFace' is already connected to 'polySeparate1.endFace'. // 
+// Error: line 102: No object matches name: move // 
+select -r pSphere9 pCylinder5 pCylinder4 pCylinder3 pCylinder1 pSphere8 pSphere7 pSphere6 pSphere5 pSphere4 pSphere3 pSphere2 pSphere1 ;
+//Arms
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+//Legs
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.6 1.2 0.6 ;
+rotate -r -os -fo 90 -30 0 ;
+move -r 1.6 0.7 -2.27 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+// Warning: line 3: 'polyMirror1.firstNewFace' is already connected to 'polySeparate1.startFace'. // 
+// Warning: line 4: 'polyMirror1.lastNewFace' is already connected to 'polySeparate1.endFace'. // 
+// Undo: polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ; // 
+select -r pCylinder4 ;
+select -cl  ;
+select -r pCylinder4 ;
+select -cl  ;
+select -r pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+// Warning: line 4: 'polyMirror1.firstNewFace' is already connected to 'polySeparate1.startFace'. // 
+// Warning: line 5: 'polyMirror1.lastNewFace' is already connected to 'polySeparate1.endFace'. // 
+// Undo: select -r pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ; // 
+select -r pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+// Result: polyMirror2 // 
+polySeparate -uss 1 -inp 1 pCylinder4;
+// Result: pCylinder5 pCylinder6 polySeparate2 // 
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+// Result: Connected polyMirror2.firstNewFace to polySeparate2.startFace. // 
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+// Result: Connected polyMirror2.lastNewFace to polySeparate2.endFace. // 
+select -r pCylinder6 ;
+doDelete;
+select -r pCylinder5 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+// Warning: line 3: 'polyMirror2.firstNewFace' is already connected to 'polySeparate2.startFace'. // 
+// Warning: line 4: 'polyMirror2.lastNewFace' is already connected to 'polySeparate2.endFace'. // 
+// Result: Connected polyMirror2.lastNewFace to polySeparate2.endFace. // 
+select -cl  ;
+// Undo: select -cl   // 
+// Undo: polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace; // 
+// Undo: select -r pCylinder5  // 
+// Undo: doDelete // 
+// Undo: select -r pCylinder6  // 
+// Undo: MirrorPolygonGeometry // 
+select -r pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+select -cl  ;
+//Body
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 2.5 2.5 2.5;
+select -r pSphere1.vtx[381] ;
+softSelect -ssd 6.170822 -sud 0.5 ;
+scale -r -p 0cm 2.5cm 0cm 0.516667 0.516667 0.516667 ;
+select -r pSphere1.vtx[144] ;
+softSelect -ssd 5.976315 -sud 0.5 ;
+move -r 0 0 -0.451164 ;
+select -r pSphere1.vtx[380] ;
+softSelect -ssd 2.380477 -sud 0.5 ;
+move -r 0 0.423403 0 ;
+select -r pSphere1 ;
+move -r 0 1.52562 0 ;
+select -r pCylinder5 ;
+scale -r 0.683999 1 0.683999 ;
+// Undo: scale -r 0.683999 1 0.683999  // 
+scale -r 0.781096 1 0.781096 ;
+doDelete;
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.781 1.2 0.781 ;
+rotate -r -os -fo 90 -30 0 ;
+move -r 1.6 0.7 -2.27 ;
+select -r pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+select -cl  ;
+// Error: line 6: Current selection doesn't match required selection type. // 
+select -cl  ;
+select -r pCylinder7 ;
+select -r pCylinder7 pSphere1 pCylinder6 pCylinder4 ;
+select -r pCylinder4 ;
+select -r pCylinder7 ;
+select -r pCylinder6 ;
+doDelete;
+select -r pCylinder1 ;
+select -r -ne defaultLightSet ;
+select -r pSphere1 ;
+//Legs
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.781 1.2 0.781 ;
+rotate -r -os -fo 90 -30 0 ;
+move -r 1.6 0.7 -2.27 ;
+select -r pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+select -cl  ;
+select -r pCylinder5 ;
+doDelete;
+select -r pCylinder4 ;
+select -r pCylinder6 ;
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.781 1.2 0.781 ;
+rotate -r -os -fo 90 -30 0 ;
+move -r 1.6 0.7 -2.27 ;
+scale -r 0.839682 1 0.839682 ;
+scale -r 0.796308 1 0.796308 ;
+select -r pSphere1 ;
+// Undo: select -r pSphere1  // 
+// Undo: scale -r 0.796308 1 0.796308  // 
+scale -r 0.77822 1 0.77822 ;
+select -r -ne defaultLightSet ;
+select -r pCylinder4 ;
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+// Result: pCylinder4 polyCylinder2 // 
+move -r 1.6 0.7 -2.27 ;
+rotate -r -os -fo 90 -30 0 ;
+//Body
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 2.5 2.5 2.5;
+select -r pSphere1.vtx[381] ;
+softSelect -ssd 6.170822 -sud 0.5 ;
+scale -r -p 0cm 2.5cm 0cm 0.516667 0.516667 0.516667 ;
+select -r pSphere1.vtx[144] ;
+softSelect -ssd 5.976315 -sud 0.5 ;
+move -r 0 0 -0.451164 ;
+select -r pSphere1.vtx[380] ;
+softSelect -ssd 2.380477 -sud 0.5 ;
+move -r 0 0.423403 0 ;
+select -r pSphere1 ;
+move -r 0 1.52562 0 ;
+//head
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 1.603335 1.603335 1.603335 ;
+move -r 0 5 0 ;
+//Ears
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.646 0.646 0.371 ;
+move -r 0.913625 6.156428 0 ;
+select -r pSphere3.vtx[184] ;
+softSelect -ssd 1.059736 -sud 0.5 ;
+move -r 0 0 0.714828 ;
+duplicate -rr;
+select -r pSphere4 ;
+move -r -1.885075 0 0 ;
+
+//Mouth
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.891 0.697 0.697 ;
+
+//eyes
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 0 21.082 -7.282 ;
+
+//nose
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.199 0.151 0.151 ;
+move -r 0 5.025443 -1.933947 ;
+
+//Arms
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+
+//Legs
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.51 1.2 0.51 ;
+
+move -r 1.6 0.7 -2.27 ;
+select -r pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+select -cl  ;
+
+//Feet
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+rotate -r -os -fo 90 0 0 ;
+select -r pSphere9.vtx[380] ;
+scale -r -p 0cm 0cm -1cm 1 1e-05 1 ;
+select -r pSphere9 ;
+rotate -r -os -fo 0 0 30.570014 ;
+scale -r 1 1 1.566913 ;
+move -r 1.959965 0 -3.7185 ;
+move -r 0 0.848516 0 ;
+move -r 0.50456 0 0.433538 ;
+select -r pSphere9
+move -r -0.165009 0 0.306508 ;
+select -r pSphere9 ;
+//polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pSphere9;
+//polySeparate -uss 1 -inp 1 pSphere9;
+//connectAttr -f polyMirror3.firstNewFace polySeparate3.startFace;
+//connectAttr -f polyMirror3.lastNewFace polySeparate3.endFace;
+select -r pSphere11 ;
+move -r 0.0130027 0 0.32822 ;
+select -r pSphere10 ;
+
+//Tail
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.436808 0.436808 0.436808 ;
+move -r 0 -0.0172248 1.577462 ;
+// Error: line 26: No object(s) to duplicate // 
+select -cl  ;
+// Undo: select -cl   // 
+// Undo: //Body
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 2.5 2.5 2.5;
+select -r pSphere1.vtx[381] ;
+softSelect -ssd 6.170822 -sud 0.5 ;
+scale -r -p 0cm 2.5cm 0cm 0.516667 0.516667 0.516667 ;
+select -r pSphere1.vtx[144] ;
+softSelect -ssd 5.976315 -sud 0.5 ;
+move -r 0 0 -0.451164 ;
+select -r pSphere1.vtx[380] ;
+softSelect -ssd 2.380477 -sud 0.5 ;
+move -r 0 0.423403 0 ;
+select -r pSphere1 ;
+move -r 0 1.52562 0 ;
+//head
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 1.603335 1.603335 1.603335 ;
+move -r 0 5 0 ;
+//Ears
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.646 0.646 0.371 ;
+move -r 0.913625 6.156428 0 ;
+select -r pSphere3.vtx[184] ;
+softSelect -ssd 1.059736 -sud 0.5 ;
+move -r 0 0 0.714828 ;
+duplicate -rr;
+select -r pSphere4 ;
+move -r -1.885075 0 0 ;
+
+//Mouth
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.891 0.697 0.697 ;
+
+//eyes
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 0 21.082 -7.282 ;
+
+//nose
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.199 0.151 0.151 ;
+move -r 0 5.025443 -1.933947 ;
+
+//Arms
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+
+//Legs
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.51 1.2 0.51 ;
+
+move -r 1.6 0.7 -2.27 ;
+select -r pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+select -cl  ;
+
+//Feet
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+rotate -r -os -fo 90 0 0 ;
+select -r pSphere9.vtx[380] ;
+scale -r -p 0cm 0cm -1cm 1 1e-05 1 ;
+select -r pSphere9 ;
+rotate -r -os -fo 0 0 30.570014 ;
+scale -r 1 1 1.566913 ;
+move -r 1.959965 0 -3.7185 ;
+move -r 0 0.848516 0 ;
+move -r 0.50456 0 0.433538 ;
+select -r pSphere9
+move -r -0.165009 0 0.306508 ;
+select -r pSphere9 ;
+//polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pSphere9;
+//polySeparate -uss 1 -inp 1 pSphere9;
+//connectAttr -f polyMirror3.firstNewFace polySeparate3.startFace;
+//connectAttr -f polyMirror3.lastNewFace polySeparate3.endFace;
+select -r pSphere11 ;
+move -r 0.0130027 0 0.32822 ;
+select -r pSphere10 ;
+
+//Tail
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.436808 0.436808 0.436808 ;
+move -r 0 -0.0172248 1.577462 ; // 
+scale -r 0.51 1.2 0.51 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+select -cl  ;
+select -r pCylinder6 ;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+rotate -r -os -fo 90 0 0 ;
+select -r pSphere9.vtx[380] ;
+scale -r -p 0cm 0cm -1cm 1 1e-05 1 ;
+select -r pSphere9 ;
+rotate -r -os -fo 0 0 30.570014 ;
+scale -r 1 1 1.566913 ;
+move -r 1.959965 0 -3.7185 ;
+move -r 0 0.848516 0 ;
+move -r 0.50456 0 0.433538 ;
+select -r pSphere9
+move -r -0.165009 0 0.306508 ;
+select -r pSphere9 ;
+// Error: line 3: No object matches name: pSphere9.vtx[380] // 
+select -r pCylinder1 ;
+select -r pCylinder1 pCylinder3 pSphere1 pCylinder4 pCylinder6 pSphere2 ;
+//Body
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 2.5 2.5 2.5;
+select -r pSphere1.vtx[381] ;
+softSelect -ssd 6.170822 -sud 0.5 ;
+scale -r -p 0cm 2.5cm 0cm 0.516667 0.516667 0.516667 ;
+select -r pSphere1.vtx[144] ;
+softSelect -ssd 5.976315 -sud 0.5 ;
+move -r 0 0 -0.451164 ;
+select -r pSphere1.vtx[380] ;
+softSelect -ssd 2.380477 -sud 0.5 ;
+move -r 0 0.423403 0 ;
+select -r pSphere1 ;
+move -r 0 1.52562 0 ;
+//head
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 1.603335 1.603335 1.603335 ;
+move -r 0 5 0 ;
+//Ears
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.646 0.646 0.371 ;
+move -r 0.913625 6.156428 0 ;
+select -r pSphere3.vtx[184] ;
+softSelect -ssd 1.059736 -sud 0.5 ;
+move -r 0 0 0.714828 ;
+duplicate -rr;
+select -r pSphere4 ;
+move -r -1.885075 0 0 ;
+
+//Mouth
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.891 0.697 0.697 ;
+
+//eyes
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 0 21.082 -7.282 ;
+
+//nose
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.199 0.151 0.151 ;
+move -r 0 5.025443 -1.933947 ;
+
+//Arms
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+
+//Legs
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.51 1.2 0.51 ;
+rotate -r -os -fo 90 -30 0 ;
+move -r 1.6 0.7 -2.27 ;
+select -r pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+select -cl  ;
+//Feet
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+rotate -r -os -fo 90 0 0 ;
+select -r pSphere9.vtx[380] ;
+scale -r -p 0cm 0cm -1cm 1 1e-05 1 ;
+select -r pSphere9 ;
+rotate -r -os -fo 0 0 30.570014 ;
+scale -r 1 1 1.566913 ;
+move -r 1.959965 0 -3.7185 ;
+move -r 0 0.848516 0 ;
+move -r 0.50456 0 0.433538 ;
+select -r pSphere9
+move -r -0.165009 0 0.306508 ;
+select -r pSphere9 ;
+// Error: line 13: No object matches name: move // 
+move -r -0.24143 0 -0.0576247 ;
+select -cl  ;
+select -r pSphere9 ;
+scale -r 0.836727 0.836727 0.836727 ;
+select -cl  ;
+select -r pSphere9 ;
+scale -r 0.846617 0.846617 0.846617 ;
+move -r 0 0.157355 0 ;
+select -cl  ;
+select -r pSphere9 ;
+select -r pSphere9 ;
+move -r 2.914628 0 -1.168061 ;
+doDelete;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+rotate -r -os -fo 90 -30.57 0 ;
+scale -r 1 0.708 0.708 1.11 ;
+move -r 2.223 1.006 -3.343 ;
+select -r pSphere9.vtx[380] ;
+scale -r -p 0cm 0cm -1cm 1 1e-05 1 ;
+select -r pSphere9 ;
+// Error: line 3: Invalid object or value: 1.11 // 
+select -r pSphere9 ;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+rotate -r -os -fo 90 -30.57 0 ;
+scale -r 0.708 0.708 1.11 ;
+move -r 2.223 1.006 -3.343 ;
+select -r pSphere9.vtx[380] ;
+scale -r -p 0cm 0cm -1cm 1 1e-05 1 ;
+select -r pSphere9 ;
+select -r pSphere9 ;
+doDelete;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+// Result: pSphere9 polySphere7 // 
+move -r 2.223 1.006 -3.343 ;
+rotate -r -os -fo 90 -30.57 0 ;
+scale -r 0.708 0.708 1.11 ;
+select -r pSphere9.vtx[380] ;
+scale -r -p 0cm 0cm -1cm 1 1e-05 1 ;
+select -r pCylinder5 ;
+// Undo: select -r pCylinder5  // 
+// Undo: select -r pSphere9.vtx[380] ;
+scale -r -p 0cm 0cm -1cm 1 1e-05 1 ; // 
+select -r pSphere9.vtx[380] ;
+scale -r -p 0cm 0cm -1cm 1 1e-05 1 ;
+select -cl  ;
+// Undo: select -cl   // 
+// Undo: scale -r -p 0cm 0cm -1cm 1 1e-05 1 ; // 
+scale -r -p 2.583082cm 1.006cm -3.952594cm 1 1.826176 1 ;
+// Undo: scale -r -p 2.583082cm 1.006cm -3.952594cm 1 1.826176 1  // 
+move -r -0.40355 0 0.500805 ;
+// Undo: move -r -0.40355 0 0.500805  // 
+softSelect -ssd 0.960428 -sud 0.5 ;
+scale -r 1 1.097483 1 ;
+// Undo: scale -r 1 1.097483 1  // 
+select -cl  ;
+select -r pSphere9 ;
+select -r pSphere9.vtx[380] ;
+softSelect -ssd 0.800478 -sud 0.5 ;
+scale -r -p 2.583082cm 1.006cm -3.952594cm 1 5.13547 1 ;
+// Undo: scale -r -p 2.583082cm 1.006cm -3.952594cm 1 5.13547 1  // 
+scale -r -p 2.583082cm 1.006cm -3.952594cm 1 1e-05 1 ;
+// Undo: scale -r -p 2.583082cm 1.006cm -3.952594cm 1 1e-05 1  // 
+softSelect -ssd 1.291419 -sud 0.5 ;
+scale -r -p 2.583082cm 1.006cm -3.952594cm 1 1e-05 1 ;
+// Undo: scale -r -p 2.583082cm 1.006cm -3.952594cm 1 1e-05 1  // 
+softSelect -ssd 1.482613 -sud 0.5 ;
+scale -r -p 2.583082cm 1.006cm -3.952594cm 1 1e-05 1 ;
+select -d pSphere9.vtx[380] ;
+select -cl  ;
+select -r pSphere9 ;
+// Undo: select -r pSphere9  // 
+// Undo: select -cl   // 
+// Undo: maintainActiveChangeSelectMode pSphere9 0; // 
+// Undo: scale -r -p 2.583082cm 1.006cm -3.952594cm 1 1e-05 1  // 
+softSelect -ssd 1.93568 -sud 0.5 ;
+scale -r -p 2.583082cm 1.006cm -3.952594cm 1 1e-05 1 ;
+select -d pSphere9.vtx[380] ;
+select -cl  ;
+select -r pSphere9 ;
+doDelete;
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 2.223 1.006 -3.343 ;
+rotate -r -os -fo 90 -30.57 0 ;
+scale -r 0.708 0.708 1.11 ;
+select -r pSphere9.vtx[380] ;
+softSelect -ssd 1.93568 -sud 0.5 ;
+scale -r -p 2.583082cm 1.006cm -3.952594cm 1 1e-05 1 ;
+select -r pSphere9 ;
+select -r pSphere9.vtx[194] ;
+softSelect -ssd 0.462514 -sud 0.5 ;
+scale -r -p 2.306493cm -0.104cm -3.484347cm 1 1 1e-05 ;
+move -r 0 0.12462 0 ;
+// Undo: move -r 0 0.12462 0  // 
+// Undo: scale -r -p 2.306493cm -0.104cm -3.484347cm 1 1 1e-05  // 
+// Undo: softSelect -ssd 0.462514 -sud 0.5  // 
+softSelect -ssd 2.362803 -sud 0.5 ;
+scale -r -p 2.306493cm -0.104cm -3.484347cm 1 1 0.384507 ;
+select -d pSphere9.vtx[194] ;
+select -cl  ;
+// Undo: select -cl   // 
+// Undo: maintainActiveChangeSelectMode pSphere9 0; // 
+// Undo: scale -r -p 2.306493cm -0.104cm -3.484347cm 1 1 0.384507  // 
+// Undo: softSelect -ssd 2.362803 -sud 0.5  // 
+// Undo: select -r pSphere9.vtx[194]  // 
+select -cl  ;
+select -r pCylinder5 ;
+move -r 1.740406 0 -1.040765 ;
+select -r pCylinder5.f[230] ;
+select -add pCylinder5.f[0:239] ;
+select -r pCylinder5.f[230] ;
+select -r pCylinder5.f[220:239] ;
+softSelect -ssd 1.846059 -sud 0.5 ;
+scale -r -p 2.740406cm 0.7cm -2.271535cm 0.862801 0.862801 0.862801 ;
+// Undo: scale -r -p 2.740406cm 0.7cm -2.271535cm 0.862801 0.862801 0.862801  // 
+select -d pCylinder5.f[220:239] ;
+// Undo: maintainActiveChangeSelectMode pCylinder5 0; // 
+// Undo: softSelect -ssd 1.846059 -sud 0.5  // 
+// Undo: dR_softSelStickyRelease // 
+// Undo: select -r pCylinder5.f[220:239]  // 
+// Undo: select -r pCylinder5.f[230]  // 
+// Undo: select -add pCylinder5.f[0:239]  // 
+// Undo: select -r pCylinder5.f[230]  // 
+// Undo: dR_softSelStickyRelease // 
+// Undo: doMenuComponentSelectionExt("pCylinder5", "facet", 0) // 
+// Undo: move -r 1.740406 0 -1.040765  // 
+select -r pCylinder5.f[220:239] ;
+softSelect -ssd 1.846059 -sud 0.5 ;
+scale -r -p 1cm 0.7cm -1.23077cm 0.70615 0.70615 0.70615 ;
+select -cl  ;
+select -r pSphere9 ;
+select -r pSphere9 pCylinder6 pCylinder4 ;
+//Legs
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.51 1.2 0.51 ;
+rotate -r -os -fo 90 -30 0 ;
+move -r 1.6 0.7 -2.27 ;
+select -r pCylinder5.f[220:239] ;
+softSelect -ssd 1.846059 -sud 0.5 ;
+scale -r -p 1cm 0.7cm -1.23077cm 0.70615 0.70615 0.70615 ;
+select -r pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+select -cl  ;
+// Error: line 6: No object matches name: pCylinder5.f[220:239] // 
+select -r pCylinder4 ;
+doDelete;
+select -r pCylinder2 pCylinder3 pSphere6 pSphere8 pSphere7 pSphere3 pSphere2 pSphere1 pSphere4 pSphere5 ;
+doDelete;
+select -r -ne defaultLightSet ;
+select -r side ;
+select -r pCylinder1 ;
+//Body
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 2.5 2.5 2.5;
+select -r pSphere1.vtx[381] ;
+softSelect -ssd 6.170822 -sud 0.5 ;
+scale -r -p 0cm 2.5cm 0cm 0.516667 0.516667 0.516667 ;
+select -r pSphere1.vtx[144] ;
+softSelect -ssd 5.976315 -sud 0.5 ;
+move -r 0 0 -0.451164 ;
+select -r pSphere1.vtx[380] ;
+softSelect -ssd 2.380477 -sud 0.5 ;
+move -r 0 0.423403 0 ;
+select -r pSphere1 ;
+move -r 0 1.52562 0 ;
+//head
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 1.603335 1.603335 1.603335 ;
+move -r 0 5 0 ;
+//Ears
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.646 0.646 0.371 ;
+move -r 0.913625 6.156428 0 ;
+select -r pSphere3.vtx[184] ;
+softSelect -ssd 1.059736 -sud 0.5 ;
+move -r 0 0 0.714828 ;
+duplicate -rr;
+select -r pSphere4 ;
+move -r -1.885075 0 0 ;
+
+//Mouth
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.891 0.697 0.697 ;
+
+//eyes
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 0 21.082 -7.282 ;
+
+//nose
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.199 0.151 0.151 ;
+move -r 0 5.025443 -1.933947 ;
+
+//Arms
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+
+//Legs
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.51 1.2 0.51 ;
+rotate -r -os -fo 90 -30 0 ;
+move -r 1.6 0.7 -2.27 ;
+select -r pCylinder5.f[220:239] ;
+softSelect -ssd 1.846059 -sud 0.5 ;
+scale -r -p 1cm 0.7cm -1.23077cm 0.70615 0.70615 0.70615 ;
+select -r pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+select -cl  ;
+// Error: line 26: No object(s) to duplicate // 
+select -r pSphere1 ;
+select -r pSphere1 pSphere2 pSphere3 ;
+//Body
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 2.5 2.5 2.5;
+select -r pSphere1.vtx[381] ;
+softSelect -ssd 6.170822 -sud 0.5 ;
+scale -r -p 0cm 2.5cm 0cm 0.516667 0.516667 0.516667 ;
+select -r pSphere1.vtx[144] ;
+softSelect -ssd 5.976315 -sud 0.5 ;
+move -r 0 0 -0.451164 ;
+select -r pSphere1.vtx[380] ;
+softSelect -ssd 2.380477 -sud 0.5 ;
+move -r 0 0.423403 0 ;
+select -r pSphere1 ;
+move -r 0 1.52562 0 ;
+//head
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 1.603335 1.603335 1.603335 ;
+move -r 0 5 0 ;
+//Ears
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.646 0.646 0.371 ;
+move -r 0.913625 6.156428 0 ;
+select -r pSphere3.vtx[184] ;
+softSelect -ssd 1.059736 -sud 0.5 ;
+move -r 0 0 0.714828 ;
+duplicate -rr;
+select -r pSphere4 ;
+move -r -1.885075 0 0 ;
+
+//Mouth
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.891 0.697 0.697 ;
+
+//eyes
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 0 21.082 -7.282 ;
+
+//nose
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.199 0.151 0.151 ;
+move -r 0 5.025443 -1.933947 ;
+
+//Arms
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+
+//Legs
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.51 1.2 0.51 ;
+rotate -r -os -fo 90 -30 0 ;
+move -r 1.6 0.7 -2.27 ;
+select -r pCylinder5.f[220:239] ;
+softSelect -ssd 1.846059 -sud 0.5 ;
+scale -r -p 1cm 0.7cm -1.23077cm 0.70615 0.70615 0.70615 ;
+select -r pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+select -cl  ;
+// Error: line 84: No object matches name: pCylinder5.f[220:239] // 
+select -r pCylinder4 pCylinder3 pCylinder1 pSphere8 pSphere7 pSphere6 pSphere5 pSphere4 pSphere3 pSphere2 pSphere1 ;
+//Body
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 2.5 2.5 2.5;
+select -r pSphere1.vtx[381] ;
+softSelect -ssd 6.170822 -sud 0.5 ;
+scale -r -p 0cm 2.5cm 0cm 0.516667 0.516667 0.516667 ;
+select -r pSphere1.vtx[144] ;
+softSelect -ssd 5.976315 -sud 0.5 ;
+move -r 0 0 -0.451164 ;
+select -r pSphere1.vtx[380] ;
+softSelect -ssd 2.380477 -sud 0.5 ;
+move -r 0 0.423403 0 ;
+select -r pSphere1 ;
+move -r 0 1.52562 0 ;
+//head
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 1.603335 1.603335 1.603335 ;
+move -r 0 5 0 ;
+//Ears
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.646 0.646 0.371 ;
+move -r 0.913625 6.156428 0 ;
+select -r pSphere3.vtx[184] ;
+softSelect -ssd 1.059736 -sud 0.5 ;
+move -r 0 0 0.714828 ;
+duplicate -rr;
+select -r pSphere4 ;
+move -r -1.885075 0 0 ;
+
+//Mouth
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.891 0.697 0.697 ;
+
+//eyes
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 0 21.082 -7.282 ;
+
+//nose
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.199 0.151 0.151 ;
+move -r 0 5.025443 -1.933947 ;
+
+//Arms
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+
+//Legs
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.51 1.2 0.51 ;
+rotate -r -os -fo 90 -30 0 ;
+move -r 1.6 0.7 -2.27 ;
+select -r pCylinder4.f[220:239] ;
+softSelect -ssd 1.846059 -sud 0.5 ;
+scale -r -p 1cm 0.7cm -1.23077cm 0.70615 0.70615 0.70615 ;
+select -r pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+select -cl  ;
+//Feet
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 2.223 1.006 -3.343 ;
+rotate -r -os -fo 90 -30.57 0 ;
+scale -r 0.708 0.708 1.11 ;
+select -r pSphere9.vtx[380] ;
+softSelect -ssd 1.93568 -sud 0.5 ;
+scale -r -p 2.583082cm 1.006cm -3.952594cm 1 1e-05 1 ;
+select -r pSphere9 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pSphere9;
+polySeparate -uss 1 -inp 1 pSphere9;
+connectAttr -f polyMirror3.firstNewFace polySeparate3.startFace;
+connectAttr -f polyMirror3.lastNewFace polySeparate3.endFace;
+select -r pSphere11 ;
+select -cl  ;
+select -r pCylinder3 pCylinder2 pCylinder6 pCylinder5 pSphere3 pSphere2 pSphere1 pSphere8 pSphere11 pSphere10 pSphere7 pSphere6 pSphere5 pSphere4 ;
+doDelete;
+select -r pCylinder1 ;
+select -r -ne pCylinder1 pCylinder4 pSphere9 defaultLightSet ;
+select -r -ne pCylinder1 defaultLightSet pCylinder4 pSphere9 ;
+select -d -ne defaultLightSet ;
+//Body
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 2.5 2.5 2.5;
+select -r pSphere1.vtx[381] ;
+softSelect -ssd 6.170822 -sud 0.5 ;
+scale -r -p 0cm 2.5cm 0cm 0.516667 0.516667 0.516667 ;
+select -r pSphere1.vtx[144] ;
+softSelect -ssd 5.976315 -sud 0.5 ;
+move -r 0 0 -0.451164 ;
+select -r pSphere1.vtx[380] ;
+softSelect -ssd 2.380477 -sud 0.5 ;
+move -r 0 0.423403 0 ;
+select -r pSphere1 ;
+move -r 0 1.52562 0 ;
+//head
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 1.603335 1.603335 1.603335 ;
+move -r 0 5 0 ;
+//Ears
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.646 0.646 0.371 ;
+move -r 0.913625 6.156428 0 ;
+select -r pSphere3.vtx[184] ;
+softSelect -ssd 1.059736 -sud 0.5 ;
+move -r 0 0 0.714828 ;
+duplicate -rr;
+select -r pSphere4 ;
+move -r -1.885075 0 0 ;
+
+//Mouth
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 0 4.75113 -1.329305 ;
+scale -r 0.891 0.697 0.697 ;
+
+//eyes
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.192 0.28 0.052 ;
+move -r 0.361 5.603 -1.405 ;
+rotate -r -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+move -r -0.747337 0 0 ;
+rotate -r -os -fo 0 21.082 -7.282 ;
+
+//nose
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.199 0.151 0.151 ;
+move -r 0 5.025443 -1.933947 ;
+
+//Arms
+polyCylinder -r 1 -h 2 -sx 20 -sy 7 -sz 5 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.643 1.199 0.643 ;
+rotate -r -os -fo 0 0 66.995901 ;
+move -r 1.671 3.34 0 ;
+select -r pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -r 0.579816 -0.196643 0 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -r pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -r pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -r -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -r pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -r pCylinder1 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+
+//Legs
+polyCylinder -r 1 -h 2 -sx 20 -sy 10 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -r 0.51 1.2 0.51 ;
+rotate -r -os -fo 90 -30 0 ;
+move -r 1.6 0.7 -2.27 ;
+select -r pCylinder4.f[220:239] ;
+softSelect -ssd 1.846059 -sud 0.5 ;
+scale -r -p 1cm 0.7cm -1.23077cm 0.70615 0.70615 0.70615 ;
+select -r pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+select -cl  ;
+
+//Feet
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r 2.223 1.006 -3.343 ;
+rotate -r -os -fo 90 -30.57 0 ;
+scale -r 0.708 0.708 1.11 ;
+select -r pSphere9.vtx[380] ;
+softSelect -ssd 1.93568 -sud 0.5 ;
+scale -r -p 2.583082cm 1.006cm -3.952594cm 1 1e-05 1 ;
+select -r pSphere9 ;
+polyMirrorFace  -cutMesh 0 -axis 0 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pSphere9;
+polySeparate -uss 1 -inp 1 pSphere9;
+connectAttr -f polyMirror3.firstNewFace polySeparate3.startFace;
+connectAttr -f polyMirror3.lastNewFace polySeparate3.endFace;
+select -cl  ;
+
+//Tail
+polySphere -radius 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+scale -r 0.436808 0.436808 0.436808 ;
+move -r 0 -0.0172248 1.577462 ;
+select -cl  ;
+CreatePolygonSphere;
+polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+// Result: pSphere13 polySphere9 // 
+CreatePolygonCylinder;
+polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+// Result: pCylinder7 polyCylinder3 // 
+// Warning: file: D:/Program Files/Autodesk/Maya2018/scripts/startup/scriptEditorPanel.mel line 635: The -keyEquivalent/-ke flag has been removed. Keys can be set using the Hotkey Editor. // 
+// Warning: file: D:/Program Files/Autodesk/Maya2018/scripts/startup/scriptEditorPanel.mel line 636: The -keyEquivalent/-ke flag has been removed. Keys can be set using the Hotkey Editor. // 

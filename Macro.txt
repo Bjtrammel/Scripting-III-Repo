@@ -1,0 +1,112 @@
+//Body
+polySphere -radius 1 -sx 20 -sy 20 -axisis 0 1 0 -cuv 2 -ch 1;
+scale -radius 2.5 2.5 2.5;
+select -radius pSphere1.vtx[381] ;
+softSelect -ssd 6.170822 -sud 0.5 ;
+scale -radius -p 0cm 2.5cm 0cm 0.516667 0.516667 0.516667 ;
+select -radius pSphere1.vtx[144] ;
+softSelect -ssd 5.976315 -sud 0.5 ;
+move -radius 0 0 -0.451164 ;
+select -radius pSphere1.vtx[380] ;
+softSelect -ssd 2.380477 -sud 0.5 ;
+move -radius 0 0.423403 0 ;
+select -radius pSphere1 ;
+move -radius 0 1.52562 0 ;
+//head
+polySphere -radius 1 -sx 20 -sy 20 -axis 0 1 0 -cuv 2 -ch 1;
+scale -radius 1.603335 1.603335 1.603335 ;
+move -radius 0 5 0 ;
+//Ears
+polySphere -radius 1 -sx 20 -sy 20 -axis 0 1 0 -cuv 2 -ch 1;
+scale -radius 0.646 0.646 0.371 ;
+move -radius 0.913625 6.156428 0 ;
+select -radius pSphere3.vtx[184] ;
+softSelect -ssd 1.059736 -sud 0.5 ;
+move -radius 0 0 0.714828 ;
+duplicate -rr;
+select -radius pSphere4 ;
+move -radius -1.885075 0 0 ;
+
+//Mouth
+polySphere -radius 1 -sx 20 -sy 20 -axis 0 1 0 -cuv 2 -ch 1;
+move -radius 0 4.75113 -1.329305 ;
+scale -radius 0.891 0.697 0.697 ;
+
+//eyes
+polySphere -radius 1 -sx 20 -sy 20 -axis 0 1 0 -cuv 2 -ch 1;
+scale -radius 0.192 0.28 0.052 ;
+move -radius 0.361 5.603 -1.405 ;
+rotate -radius -os -fo 21.594293 -12.479332 0 ;
+duplicate -rr;
+move -radius -0.747337 0 0 ;
+rotate -radius -os -fo 0 21.082 -7.282 ;
+
+//nose
+polySphere -radius 1 -sx 20 -sy 20 -axis 0 1 0 -cuv 2 -ch 1;
+scale -radius 0.199 0.151 0.151 ;
+move -radius 0 5.025443 -1.933947 ;
+
+//Arms
+polyCylinder -radius 1 -h 2 -sx 20 -sy 7 -sz 5 -axis 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -radius 0.643 1.199 0.643 ;
+rotate -radius -os -fo 0 0 66.995901 ;
+move -radius 1.671 3.34 0 ;
+select -radius pCylinder1.vtx[320] ;
+softSelect -ssd 1.053994 -sud 0.5 ;
+move -radius 0.579816 -0.196643 0 ;
+select -radius pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+select -radius pCylinder1.f[320:339] ;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+select `ls -sl`;PolySelectTraverse 1;select `ls -sl`;
+doDelete;
+select -radius pCylinder1.e[223] ;
+select -add pCylinder1.e[220:239] ;
+softSelect -ssd 3.055542 -sud 0.5 ;
+scale -radius -p 0.695144cm 3.051067cm -1.15066e-07cm 0.286015 0.286015 0.286015 ;
+select -radius pCylinder1.e[84] ;
+select -add pCylinder1.e[80:99] ;
+polySoftEdge -a 180 -ch 1 pCylinder1.e[80:99];
+select -radius pCylinder1 ;
+polyMirrorFace  -cutMesh 0 -axisis 0 -axisisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxisis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder1;
+polySeparate -uss 1 -inp 1 pCylinder1;
+connectAttr -f polyMirror1.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror1.lastNewFace polySeparate1.endFace;
+select -cl  ;
+
+//Legs
+polyCylinder -radius 1 -h 2 -sx 20 -sy 10 -sz 1 -axis 0 1 0 -rcp 0 -cuv 3 -ch 1;
+scale -radius 0.51 1.2 0.51 ;
+rotate -radius -os -fo 90 -30 0 ;
+move -radius 1.6 0.7 -2.27 ;
+select -radius pCylinder4.f[220:239] ;
+softSelect -ssd 1.846059 -sud 0.5 ;
+scale -radius -p 1cm 0.7cm -1.23077cm 0.70615 0.70615 0.70615 ;
+select -radius pCylinder4 ;
+polyMirrorFace  -cutMesh 0 -axisis 0 -axisisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxisis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pCylinder4;
+polySeparate -uss 1 -inp 1 pCylinder4;
+connectAttr -f polyMirror2.firstNewFace polySeparate2.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate2.endFace;
+select -cl  ;
+
+//Feet
+polySphere -radius 1 -sx 20 -sy 20 -axis 0 1 0 -cuv 2 -ch 1;
+move -radius 2.223 1.006 -3.343 ;
+rotate -radius -os -fo 90 -30.57 0 ;
+scale -radius 0.708 0.708 1.11 ;
+select -radius pSphere9.vtx[380] ;
+softSelect -ssd 1.93568 -sud 0.5 ;
+scale -radius -p 2.583082cm 1.006cm -3.952594cm 1 1e-05 1 ;
+select -radius pSphere9 ;
+polyMirrorFace  -cutMesh 0 -axisis 0 -axisisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxisis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 1 -ch 1 pSphere9;
+polySeparate -uss 1 -inp 1 pSphere9;
+connectAttr -f polyMirror3.firstNewFace polySeparate3.startFace;
+connectAttr -f polyMirror3.lastNewFace polySeparate3.endFace;
+select -cl  ;
+
+//Tail
+polySphere -radius 1 -sx 20 -sy 20 -axis 0 1 0 -cuv 2 -ch 1;
+scale -radius 0.436808 0.436808 0.436808 ;
+move -radius 0 -0.0172248 1.577462 ;
