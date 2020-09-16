@@ -1,0 +1,64 @@
+//Adds two numbers
+//proc float Addition(float $num1, float $num2)
+{
+  //  float $sum;
+   // $sum = $num1 + $num2;
+    
+    //return $sum;
+}
+
+//print (Addition(2,2));
+
+//Subs two numbers
+//proc float Subtraction(float $num1, float $num2)
+{
+  //  float $sum;
+   // $sum = $num1 + $num2;
+    
+    //return $sum;
+}
+
+//print (Subtraction(2,2));
+
+//Times two numbers
+//proc float Multiplication(float $num1, float $num2)
+{
+  //  float $sum;
+   // $sum = $num1 + $num2;
+    
+    //return $sum;
+}
+
+//print (Multiplication(2,2));
+
+//Devides two numbers
+//proc float Division(float $num1, float $num2)
+{
+  //  float $sum;
+   // $sum = $num1 + $num2;
+    
+    //return $sum;
+}
+
+//print (Divisionn(2,2));
+
+
+//Prints how many numbers are in array
+{
+	float $input[] = {2,2,2};
+    $numInts=size($input);
+    print ($numInts);
+	}
+
+
+//Current work in progress to add array
+proc float Addition(float $input[])
+{
+    float $sum;
+    //float $input[] = {1,2,3};
+    for ($value in $input);
+    $sum += $value;
+    
+    return $sum;
+}
+print (Addition{1,2,3});
