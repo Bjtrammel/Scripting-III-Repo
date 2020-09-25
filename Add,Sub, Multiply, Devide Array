@@ -7,6 +7,17 @@
     //return $sum;
 }
 
+//Addition Array
+proc float AddNum(float $input[])
+{
+    float $sum;
+    for($value = 0; $value < size($input); $value ++)
+    $sum += $input[$value];
+    
+    return $sum;
+}
+AddNum{1,2,3};
+
 //print (Addition(2,2));
 
 //Subs two numbers
@@ -51,14 +62,67 @@
 	}
 
 
-//Current work in progress to add array
-proc float Addition(float $input[])
+//Average
+proc float Averages(float $input[])
 {
-    float $sum;
-    //float $input[] = {1,2,3};
-    for ($value in $input);
-    $sum += $value;
+    float $arraySum;
+    float $numCount;
+    float $arrayAverage;
     
-    return $sum;
+    $numCount=size($input);
+   for($value = 0; $value < size($input); $value ++)
+    $arraySum += $input[$value];
+
+    $arrayAverage = $arraySum / $numCount;
+    
+    return $arrayAverage;     
+
 }
-print (Addition{1,2,3});
+Averages{1,2,3.4,5,6};
+
+
+//Median?
+If Odd
+Sort and count array
+Count /2 
+find that value in array
+if .5 round up (add .5 to number)
+
+If even
+find middle two numbers /2
+
+proc int[] findMedian(int $input[])
+{
+    //sort all the nums least to great
+    int $sortedInts[];
+	$sortInts = `sort $input`;
+   
+    //count the size, devide by 2, find out if the size is even or odd by Modulus
+    int $sortedSize;
+    int $EvenorOdd[];
+    $sortedSize = size($sortedInts) / 2;
+    $EvenorOdd = $sortedSize % 2;
+    
+    //if odd  take the  array size / 2 + .5 (to equial a whole #)
+    //then take the resulting number and return that place in the array
+    if (size($EvenorOdd) = 1)
+    { 
+      int $oddMiddle;
+      $oddMiddle = $sortedInts[] / 2 + 0.5;
+      return $sortedInts[$oddMiddle];
+     }
+     // take the array / in two then add or subtract to get the two middle numbers
+     //then take those two numbers add them together and devide to get your answer
+     else 
+     {
+       int $lowMiddle;
+       int $highMiddle;
+       float $evenMiddle;
+       $lowMiddle = size($sortedInts) / 2 - 0.5;
+       $highMiddle = size($sortedInts) / 2 + 0.5;
+       $evenMiddle = $lowMiddle + $highMiddle / 2;
+       return $evenMiddle
+     }
+}
+
+findMedian ({2,3,1});
