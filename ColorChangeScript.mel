@@ -1,0 +1,8 @@
+	int $colorNum = 1;
+	string $selectedCtrls[] = `ls -s`;
+	
+	for ($ctrl in $selectedCtrls)
+	{
+	  setAttr ($ctrl + ".overrideEnabled") 1;
+	  setAttr ($ctrl + ".overrideColor") ($colorNum);	
+	}
